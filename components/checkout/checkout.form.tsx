@@ -303,7 +303,9 @@ export default function CheckoutForm({}: CheckoutFormProps) {
                 error={!!errors.geoname}
               >
                 {geoNames.map((geoName) => (
-                  <MenuItem value={geoName.id}>{geoName.name}</MenuItem>
+                  <MenuItem key={geoName.id} value={geoName.id}>
+                    {geoName.name}
+                  </MenuItem>
                 ))}
               </Select>
             </FormControl>
