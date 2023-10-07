@@ -1,19 +1,12 @@
-"use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import HeaderBurger from "./header/header.burger";
 
 interface HeaderProps {}
 
 export default function Header({}: HeaderProps) {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  function onOpenMenuClick() {
-    setIsMenuOpen((prevState) => !prevState);
-  }
-
   return (
-    <div
-      className={["header", isMenuOpen ? "header__menu-open" : ""].join(" ")}
-    >
+    <div className="header">
       <div className="header__container">
         <div className="header__pc">
           <div className="header__first">
@@ -134,11 +127,7 @@ export default function Header({}: HeaderProps) {
               alt="Agilus logo"
             />
           </div>
-          <button onClick={onOpenMenuClick} className="header__menu-button">
-            <span />
-            <span />
-            <span />
-          </button>
+          <HeaderBurger />
           <div className="header__menu-hidden">
             <nav className="header__menu" aria-label="Основная навигация">
               <ul role="list" className="header__menu-list">

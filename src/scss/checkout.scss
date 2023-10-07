@@ -1,0 +1,252 @@
+.checkout {
+  flex: 1;
+  &__container {
+    padding: 0;
+  }
+  &__header {
+    margin-bottom: rem(40);
+  }
+  &__card {
+  }
+}
+
+.checkout-header {
+  &__title {
+    font-weight: 600;
+    @include adaptiveValue("font-size", 30, 20);
+    line-height: 1.5;
+    margin-bottom: rem(15);
+    text-align: center;
+  }
+
+  &__steps {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-bottom: 40px;
+    column-gap: rem(123);
+
+    &:before{
+      content: "";
+      width: 100%;
+      height: 1px;
+      background: #DADFE3;
+      position: absolute;
+      left: 0px;
+      top: 40px;
+      z-index: -1;
+    }
+  }
+
+  &__step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    z-index: 1;
+
+  }
+  &__step-number{
+    text-align: center;
+    vertical-align: central;
+    background: #DADFE3;
+    border: 1px solid #DADFE3;
+    color: #fff;
+    width: rem(60);
+    height: rem(60);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: rem(30);
+    line-height: 1;
+    font-weight: 600;
+    span{
+      display: none;
+      position: absolute;
+    }
+
+    .active & {
+      border: 1px solid #009AFF;
+      background: #fff;
+      color: #009AFF;
+    }
+    .done & {
+      background: #009AFF;
+      color: #009AFF;
+      span {
+        display: block;
+      }
+    }
+  }
+  &__step-name{
+    position: absolute;
+    white-space: nowrap;
+    text-transform: uppercase;
+    @include adaptiveValue("font-size", 18, 16);
+    font-weight: 500;
+    bottom: 0px;
+    color: #C4CACE;
+    .active &{
+      color: #2C3E50;
+    }
+  }
+}
+
+.checkout-card {
+  &__title {
+    @include adaptiveValue("font-size", 24, 20);
+    font-weight: 600;
+    @include adaptiveValue("margin-bottom", 50, 10);
+  }
+  &__button{
+    display: flex;
+    justify-content: center;
+    margin-top: rem(50);
+  }
+}
+
+.cart {
+  &__table {
+    margin-bottom: rem(40);
+  }
+  &__total-row {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    line-height: 1.2;
+    font-size: rem(16);
+    margin-bottom: 0px;
+  }
+
+  &__total-row-title {
+  }
+
+  &__total-row-value {
+
+  }
+}
+
+.cart-table {
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    &:nth-child(even) {
+      background: #F8F8F8;
+    }
+    @media(max-width:$tablet){
+      flex-wrap: wrap;
+      position: relative;
+    }
+  }
+
+  &__row--head {
+    font-weight: 600;
+    background: none !important;
+    align-items: flex-start;
+    .cart-table__row-column {
+      padding: 0px 20px 15px 20px;
+    }
+    .cart-table__row-left{
+      align-items: flex-start;
+    }
+    @media(max-width:$tablet){
+      display: none;
+    }
+  }
+
+  &__row-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    flex-wrap: wrap;
+    @media(max-width:$tablet){
+      width: 100%;
+      padding: 20px 0px;
+    }
+    .cart-table__row-column {
+      &:nth-child(1){
+        width: rem(130);
+      }
+      &:nth-child(2){
+        flex: 1
+      }
+      &:nth-child(3){
+        width: rem(280);
+      }
+      @media(max-width:$tablet){
+        &:nth-child(1){
+          width: 85px;
+        }
+        &:nth-child(2){
+          order: 3;
+          width: 100%;
+          flex: auto;
+          margin-top: 14px;
+        }
+        &:nth-child(3){
+          width: auto;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  &__row-column {
+    padding: 20px;
+  }
+
+  &__row-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 460px;
+    @media(max-width:$tablet){
+      width: 100%;
+      padding: 0px 0px 20px 0px;
+    }
+    .cart-table__row-column {
+      &:nth-child(1){
+        width: 140px;
+        text-align: center;
+      }
+      &:nth-child(2){
+        flex: 1
+      }
+      &:nth-child(3){
+        width: rem(160);
+      }
+      @media(max-width:$tablet){
+        &:nth-child(1){
+          width: auto;
+          padding: 0px;
+          position: absolute;
+          right: 20px;
+          top: 20px;
+        }
+        &:nth-child(2){
+          display: flex;
+          font-weight: 500;
+        }
+        &:nth-child(3){
+          width: auto;
+        }
+      }
+    }
+  }
+
+  &__cost {
+  }
+
+  &__del {
+    display: flex;
+    align-items: center;
+    column-gap: rem(10);
+  }
+}
+

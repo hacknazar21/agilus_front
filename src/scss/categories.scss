@@ -1,0 +1,111 @@
+.categories {
+  &__current{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 50px;
+    background-color: #E9EEF7;
+    padding: 5px 20px 5px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #2C3E50;
+    font-size: 14px;
+    width: 100%;
+    @media(min-width:$mobile){
+      display: none;
+    }
+  }
+  &__aside {
+    position: relative;
+    z-index: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    color: #2C3E50;
+    line-height: 1.2;
+    font-size: 1rem;
+    font-weight: 550;
+    transition: height 0.3s ease;
+    @media(min-width:$mobile){
+      width: 270px;
+    }
+    @media(max-width:$mobile){
+        height: 0;
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+    }
+  }
+
+  &__list {
+  }
+
+  &__list-box{
+  }
+
+  &__list-item {
+    display: block;
+    background: #F9FAFF;
+    &:hover{
+      background: #E9EEF6;
+    }
+    position: relative;
+    .submenu-open &{
+      background: #E9EEF6;
+    }
+    .submenu-open & .arrow {
+        transform: rotate(180deg);
+    }
+  }
+
+  &__list-link {
+    display: flex;
+    padding: 15px 20px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    transition: background 0.3s ease;
+    flex: 1;
+  }
+
+  &__sub-list {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    pointer-events: none;
+    .submenu-open & {
+      pointer-events: auto;
+    }
+  }
+
+  &__sub-list-item {
+    background: #F9FAFF;
+    &:hover{
+      background: #E9EEF6;
+    }
+    &.active{
+      background: #E9EEF6;
+    }
+  }
+
+  &__sub-list-link {
+    display: flex;
+    padding: 15px 20px 15px 35px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    transition: background 0.3s ease;
+  }
+  .arrow {
+    z-index: 2;
+    position: absolute;
+    height: 90%;
+    right: 0;
+    top: 0;
+    align-self: center;
+    padding: 0 20px;
+    transition: transform 0.3s ease;
+    background-color: transparent;
+  }
+}

@@ -1,5 +1,15 @@
 .main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  margin: rem(30) 0 rem(50);
+  &__container{
+    display: flex;
+    @media(max-width:$mobile){
+        flex-direction: column;
+      row-gap: rem(20);
+      padding-top: rem(120);
+      .no-search & {
+        padding-top: rem(80);
+      }
+    }
+    column-gap: 40px;
+  }
 }

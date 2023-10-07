@@ -1,0 +1,146 @@
+.analyses-detail {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  column-gap: rem(20);
+  @media(max-width:$tablet){
+      flex-direction: column-reverse;
+    row-gap: rem(10);
+  }
+  &__info {
+    flex: 1;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1.5;
+    margin: 0px 0px 20px;
+  }
+
+  &__buttons {
+    display: flex;
+    margin-bottom: rem(25);
+  }
+
+  &__button {
+    border-radius: 6px;
+    display: flex;
+    padding: 10px 15px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    @media(max-width:$mobile){
+      padding: 5px 10px;
+    }
+    &:hover{
+      color: #009AFF;
+    }
+    &.active {
+      background-color: #E9EEF6;
+    }
+  }
+
+  &__text-box {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+
+  &__checkout {
+    flex: 0 0 rem(270);
+    background: #E9EEF6;
+    border-radius: 10px;
+    padding: rem(22) rem(20);
+    align-self: flex-start;
+    @media(max-width:$tablet){
+      width: 100%;
+    }
+  }
+
+  &__checkout-section {
+    &:nth-child(1){
+      padding-top: 0;
+    }
+    &:nth-child(2){
+      border-top: solid #B7C4CB 1px;
+      border-bottom: solid #B7C4CB 1px;
+    }
+    padding: 12px 0px;
+    line-height: 1.5;
+  }
+
+  &__checkout-section-title {
+    color: #9EA2A4;
+    font-weight: 450;
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  &__checkout-section-value {
+    font-weight: 500;
+  }
+
+  &__checkout-code {
+  }
+
+  &__checkout-deadline {
+    color: #009AFF;
+    font-weight: 600;
+  }
+
+  &__checkout-price {
+    font-size: rem(20);
+    color: #009AFF;
+    font-weight: 700;
+    display: inline-block;
+    margin-right: rem(5);
+  }
+
+  &__checkout-price-old {
+    font-size: rem(12);
+    display: inline-block;
+    text-decoration: line-through;
+  }
+
+  &__card{
+    border: 1px solid #009AFF;
+    background-color: #009AFF;
+    color: #fff;
+    padding: 5px 10px;
+    height: rem(48);
+    border-radius: rem(24);
+    width: 100%;
+    max-width: 250px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    column-gap: rem(5);
+    justify-content: center;
+    align-items: center;
+    @media(max-width:$tablet){
+      max-width: none;
+    }
+    span{
+      font-weight: 600;
+      line-height: 1;
+      transition: color 0.3s ease;
+    }
+    svg path {
+      transition: fill 0.3s ease;
+    }
+    &:hover {
+      background-color: #fff;
+      span {
+        color: #009AFF;
+      }
+      svg path {
+        fill: #009AFF;
+      }
+    }
+  }
+}
