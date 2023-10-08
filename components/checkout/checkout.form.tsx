@@ -49,9 +49,7 @@ export default function CheckoutForm({}: CheckoutFormProps) {
       try {
         const geoNames_res = await fetch("/api/geonames/");
         setGeonames(await geoNames_res.json());
-      } catch (e) {
-        console.log(e);
-      }
+      } catch (e) {}
     })();
   }, []);
   useEffect(() => {
@@ -80,9 +78,7 @@ export default function CheckoutForm({}: CheckoutFormProps) {
         } else {
           setModalSuccess(true);
         }
-      } catch (e) {
-        console.log(e);
-      }
+      } catch (e) {}
     })();
   }
 
@@ -106,10 +102,6 @@ export default function CheckoutForm({}: CheckoutFormProps) {
     await router.push("/");
     setModalSuccess(false);
   }
-
-  useEffect(() => {
-    console.log(form);
-  }, [form]);
 
   return (
     <div className="checkout__form checkout-form">

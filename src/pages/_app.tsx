@@ -4,7 +4,6 @@ import type { AppProps } from "next/app";
 import ContextCheckout from "../../components/context/context.checkout";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
-  console.log(pageProps);
   return (
     <ContextCheckout>
       <LayoutMain>

@@ -12,7 +12,6 @@ async function getData(params: queryParams) {
   const isAllCategories =
     !params.category || params.category === "initial-category";
   const isSearch = !!params.search;
-  console.log(params.search);
   const categories_with_analyses_res = await fetch(
     process.env.API_URL +
       (isAllCategories
@@ -47,7 +46,7 @@ export default async function Home(props) {
   );
   return (
     <ContextCheckout>
-      <LayoutMain>
+      <LayoutMain isNoSearch={false}>
         <Catalogue
           currentActive={props.searchParams.category ?? "initial-category"}
           currentCategory={categories_with_analyses_res[0]}

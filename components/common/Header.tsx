@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import HeaderBurger from "./header/header.burger";
+import Link from "next/link";
 
 interface HeaderProps {}
 
@@ -10,14 +11,14 @@ export default function Header({}: HeaderProps) {
       <div className="header__container">
         <div className="header__pc">
           <div className="header__first">
-            <div className="header__image">
+            <Link href={"https://agilus.kz"} className="header__image">
               <Image
                 src={"/logo.png"}
                 width={200}
                 height={64}
                 alt="Agilus logo"
               />
-            </div>
+            </Link>
             <div className="header__title-box">
               <h1 className="header__title">Молекулярно-генетический центр</h1>
               <h2 className="header__subtitle">
@@ -90,43 +91,58 @@ export default function Header({}: HeaderProps) {
             <nav className="header__menu" aria-label="Основная навигация">
               <ul role="list" className="header__menu-list">
                 <li className="header__menu-list-item">
-                  <a className="header__menu-list-link" href="">
+                  <Link
+                    href={"https://agilus.kz"}
+                    className="header__menu-list-link"
+                  >
                     Главная
-                  </a>
+                  </Link>
                 </li>
                 <li className="header__menu-list-item">
-                  <a className="header__menu-list-link" href="">
+                  <Link
+                    href={"https://agilus.kz"}
+                    className="header__menu-list-link"
+                  >
                     О нас
-                  </a>
+                  </Link>
                 </li>
                 <li className="header__menu-list-item">
-                  <a className="header__menu-list-link" href="">
+                  <Link
+                    href={"https://agilus.kz"}
+                    className="header__menu-list-link"
+                  >
                     Услуги
-                  </a>
+                  </Link>
                 </li>
                 <li className="header__menu-list-item">
-                  <a className="header__menu-list-link" href="">
+                  <Link
+                    href={"https://agilus.kz"}
+                    className="header__menu-list-link"
+                  >
                     Прайс-лист
-                  </a>
+                  </Link>
                 </li>
                 <li className="header__menu-list-item">
-                  <a className="header__menu-list-link" href="">
+                  <Link
+                    href={"https://agilus.kz"}
+                    className="header__menu-list-link"
+                  >
                     Контакты
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </nav>
           </div>
         </div>
         <div className="header__mobile">
-          <div className="header__image">
+          <Link href="https://agilus.kz" className="header__image">
             <Image
               src={"/logo.png"}
               width={200}
               height={64}
               alt="Agilus logo"
             />
-          </div>
+          </Link>
           <HeaderBurger />
           <div className="header__menu-hidden">
             <nav className="header__menu" aria-label="Основная навигация">
