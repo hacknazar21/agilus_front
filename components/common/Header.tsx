@@ -100,7 +100,7 @@ export default function Header({}: HeaderProps) {
                 </li>
                 <li className="header__menu-list-item">
                   <Link
-                    href={"https://agilus.kz"}
+                    href={"https://agilus.kz/aboutus"}
                     className="header__menu-list-link"
                   >
                     О нас
@@ -115,16 +115,13 @@ export default function Header({}: HeaderProps) {
                   </Link>
                 </li>
                 <li className="header__menu-list-item">
-                  <Link
-                    href={"https://agilus.kz"}
-                    className="header__menu-list-link"
-                  >
+                  <Link href={"/"} className="header__menu-list-link">
                     Прайс-лист
                   </Link>
                 </li>
                 <li className="header__menu-list-item">
                   <Link
-                    href={"https://agilus.kz"}
+                    href={"https://agilus.kz/contacts"}
                     className="header__menu-list-link"
                   >
                     Контакты
@@ -148,29 +145,41 @@ export default function Header({}: HeaderProps) {
             <nav className="header__menu" aria-label="Основная навигация">
               <ul role="list" className="header__menu-list">
                 <li className="header__menu-list-item">
-                  <a className="header__menu-list-link" href="">
+                  <Link
+                    href={"https://agilus.kz"}
+                    className="header__menu-list-link"
+                  >
                     Главная
-                  </a>
+                  </Link>
                 </li>
                 <li className="header__menu-list-item">
-                  <a className="header__menu-list-link" href="">
+                  <Link
+                    href={"https://agilus.kz/aboutus"}
+                    className="header__menu-list-link"
+                  >
                     О нас
-                  </a>
+                  </Link>
                 </li>
                 <li className="header__menu-list-item">
-                  <a className="header__menu-list-link" href="">
+                  <Link
+                    href={"https://agilus.kz"}
+                    className="header__menu-list-link"
+                  >
                     Услуги
-                  </a>
+                  </Link>
                 </li>
                 <li className="header__menu-list-item">
-                  <a className="header__menu-list-link" href="">
+                  <Link href={"/"} className="header__menu-list-link">
                     Прайс-лист
-                  </a>
+                  </Link>
                 </li>
                 <li className="header__menu-list-item">
-                  <a className="header__menu-list-link" href="">
+                  <Link
+                    href={"https://agilus.kz/contacts"}
+                    className="header__menu-list-link"
+                  >
                     Контакты
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </nav>
